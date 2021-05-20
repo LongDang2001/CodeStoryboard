@@ -1,0 +1,56 @@
+NSLayoutContran, AChorContrain..
+ 
+khi gọi đến tableView.estimatedRowHeight là cung cấp chiều cao của cái hàng thavle...
+
++ làm các giao diện với UInavigation,…UINavigator bar, làm giao diện với các thanh bar…UISearBarDelegate… leftBarButtonItem, topItem, 
++ bây giờ là học những cái cần thiết từ từ, tìm hiểu về Navigator bar…phải nghiên cứu, làm từng phần một và nốt ra, đã có souce code sẵn rồi chỉ ngồi mò mà code theo…
+
+
+
+
++ cần phải hiểu rõ cái NSLayout này để contrant…
+
++ NSLayout Contraint:  là gì: nó sẽ xác đinh hai cái ràng buộc giữa hai thuộc tính, và các giá trị đó sẽ đc tạo bởi các contraint, bằng cách ràng buọc nó với leading, traiming, tốp, bottom,…, margin là khoảng cách từ item tới một khoảng cách bên ngoài của item khác, còn padding là khoảng cách nằm bên trong….
++ NSLayout Contraint nó gọi đến init hạc (), nó có 2 cách đê containt với các view khác, khi gọi init thì nó có các thông số. để thêm các giá trị vào. trong init() nó có các thuộc tính như sau: item la, khi gọi thêm init thì có nghia là cái ràng buộc nó có thể thay đổi với tỉ lệ ngang sọc nhất định so với view cha cố định của nó, ví dụ như nó có cái atributed: chính là cái tỉ lệ center hoặc centerY, …đó là cái thuộc tính của View so với cái View kia…
++ relatedBy là cái để xác định kích thước giữa 2 cái view… nó gồm 3 thuộc tính là equal, lessThanOrEqual,  greaterThanOrEqual là cái để xác định tỉ lệ giưa x vs y, ...
++ phải hiểu các thuộc tính như: có từ margin của bottom, tốp, lét, right là gì…., trainlingMargin, rightMargin với LeddingMargin,...
++ centerXWithinMargins nằm ở trung tâm tính từ margin, centerYWithinMargins. notAnAttribute là cái không cần thuộc tính trong này...
++ multiplier là kiểu gi: nó là cái tỉ lệ giống như cái giữa X, Y. tỉ lệ ở đây nằm từ 0 -> 2, theo chiều X và Y, để là 1 thì nó nằm chính giữa,…
++ Constant là hằng số đc cộng vào thuộc tính, nó là các pixel của view, nó là các hằng số của width và height…., đúng là hằng số của atributed… 
++ Item và toItem là cái view1 so với view2, nó xác định cái view1 liên kết như nào với view2 cố định,...
++ cần phải gọi đến isActive để mặc định là false, nếu để là true thì nó cho phép đc ràng buộc…., có thể khi gọi mỗi lần và gọi Active = true hoặc gọi nó bằng cách NSLayoutConstraint.activate([]) tên khai báo của các NSlayoutConstranit…
++ cần. phải hiêu thuộc tính của cái atribted trong đấy.., test với các thuoc tính khác…. NSLayoutContraint này phù hợp cho việc code các thành phần và 2 view phụ thuộc lẫn nhau có tính tỉ lệ giữa chúng… và không nên code khi mà fix cứng các toạ độ x, y ví dụ như đặt toạ độ Fright , left 
++ cần hiẻu rõ thuôc tính, chưa cần chuyển vội, phải đạt thuộc tính khi mà so sánh view1 với view2 có cùng toạ độ, ví dụ như centerX view1 cùng với Center view2,. 
+
++ ví dụ nếu contrain 4 toạ độ thuộc tính mà 2 cái height với toạ độ của các top và bottom nó giống nhau, không biết nó lấy thuộc tính gì…, nó sẽ lấy toạ độ tốp, bottom chứ không lấy height của nó: ….
++ có 1 vấn đề cần làm, có thể lấy chiều cao của view1 so với chiều cao của view2: cần một cái tỉ lệ ….cái này cần phải hiểu về chỏ...
+
++ NSLayoutConstraint.constraints có thuôc tính withVisualFormat nó là thuộc tính đc viết tắt để contraint nó, code thằng này nó khó hơn code thằng phía trên…
+
+CGRect: là kiểu dữ liệu gì: mặc định của nó có toạ độ 0; 0. nằm góc trên ben trái… nó sẽ xác định tất cả bốn mặt của cái storyboard, 
+nó phải xác định tất cả 4 mặt…
+
+CGPoint: CGPoint xác định điểm x,y nó chỉ cần biết hai điểm toạ độ, 
+
+
+
++ AutosizingMask: tìm hiểu về dạng này: 
++ cái view.center là xác định cái điểm trung tâm. cái này xác định CGPoint() nó sẽ xác định điểm toạ độ, x,y: 
++ Bounds: gọi toạ độ view.bounds là cách xác đinh tới điểm trong một cái màn view, bounds có kiểu giá trị là CGRect, cái bounds là cái mà xác định các khung của cái uiView,vẫn chưa hiểu kĩ, nó như là một toạ độ điểm và nó có thể chuyển tới một điểm trên tạo độ.
+maxX, maxY, minX,...nó điểm của các trục trên các góc của một cái khung, midX, midY là các diểm trung tâm của View...
++ Frame: Khung , nó là một cái khung của View, xác định nó có kiểu dữ liệu là CGRect, nó có tác dụng để bao bọc các view bên trong, nếu cái frame này thay đổi chiều cao hoặc vị trí sẽ thay đổi điểm center của nó...toạ độ của nó xác định trên các điêm chứ không phải xác định bằng height và top, right
++ 
+
+cần phải chú ý đến cái view.center = CGPoint() nó là cái xác định điểm trung tâm của view…
+
+
+Sử Dụng: NSLAyoutAchor:   
+
++ Sử dụng Achor cũng liên quán đến NSLayout…
++ khi gọi đến widthAchor gọi đén rất nhiều hàm contraint(có các thuộc tính khác nhau, …)
+
++ Khi gọi đến leadingAnchor hoặc trailingAchor thì nó gọi đến cái Contraint(có thuộc tính bên trong khác với)  cái Hegiht và Width,  
+
++ view.safeAreaLayoutGuide là cái màn hình không chứa thanh thông báo, 
+
+NSLayoutDimension: có kiểu dữ liệu NSLayout Contraint…. khi gọi đến thuộc tính contrain.() có thuôc tính equalto và gọi đến NSlayoutDimension, có mutitle thì nó sẽ có thằng này.
