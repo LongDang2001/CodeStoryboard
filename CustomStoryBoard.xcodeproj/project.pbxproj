@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8409A4CD2656C38B00A72572 /* CustomAnchorContraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409A4CC2656C38B00A72572 /* CustomAnchorContraint.swift */; };
 		D748B2DD2655014E00529243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748B2DC2655014E00529243 /* AppDelegate.swift */; };
 		D748B2DF2655014E00529243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748B2DE2655014E00529243 /* SceneDelegate.swift */; };
 		D748B2E12655014E00529243 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748B2E02655014E00529243 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8409A4CC2656C38B00A72572 /* CustomAnchorContraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnchorContraint.swift; sourceTree = "<group>"; };
 		D748B2D92655014E00529243 /* CustomStoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomStoryBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D748B2DC2655014E00529243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D748B2DE2655014E00529243 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				D748B2E02655014E00529243 /* ViewController.swift */,
 				D7AE793126563EE0002855CC /* PushViewController.swift */,
 				D7AE793326563EEA002855CC /* PopViewController.swift */,
+				8409A4CC2656C38B00A72572 /* CustomAnchorContraint.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				D748B31126551E9100529243 /* VCCodeStoryboard.swift in Sources */,
 				D748B2E12655014E00529243 /* ViewController.swift in Sources */,
 				D7AE793426563EEA002855CC /* PopViewController.swift in Sources */,
+				8409A4CD2656C38B00A72572 /* CustomAnchorContraint.swift in Sources */,
 				D748B2DD2655014E00529243 /* AppDelegate.swift in Sources */,
 				D7AE793226563EE0002855CC /* PushViewController.swift in Sources */,
 				D748B2DF2655014E00529243 /* SceneDelegate.swift in Sources */,
@@ -474,6 +478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomStoryBoard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,6 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomStoryBoard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

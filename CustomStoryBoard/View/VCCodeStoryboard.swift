@@ -11,8 +11,6 @@ class VCCodeStoryboard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         // USING NSLayoutConstraint
         let newView = UIView()
         newView.backgroundColor = UIColor(red: 33/255, green: 89/255, blue: 150/255, alpha: 1)
